@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background: #262B29;
+    --footer: #3F547A;
+    --complementary: #84DFE3;
+    --text: #FDF4B0;
+}
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    background-color: var(--background);
+    color: var(--text);
+    padding: 2rem;
+}
+header, nav, main, section, footer {
+    margin-top: 1rem;
+}
+ul {
+    list-style: none;
+    color: var(--text);
+}
