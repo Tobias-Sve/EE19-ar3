@@ -9,12 +9,19 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header>
-        <h1>Dagens väder</h1>
-        <h3>Presenteras av Tage, Tobias och Jacob</h3>
-    </header>
-    <main>
+    <div class="container">
+        <header>
+            <h1>Dagens väder</h1>
+            <h3>Presenteras av Tage, Tobias och Jacob</h3>
+        </header>
+        <main>
+            <?php
+            
+            ?>
+        </main>
+    </div>
+    <footer>
 
-    </main>
+    </footer>
 </body>
 </html>

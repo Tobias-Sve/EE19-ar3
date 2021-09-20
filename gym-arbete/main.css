@@ -9,3 +9,33 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
     margin: 0;
     padding: 0;
 }
+
+body {
+    background: url(./bilder/inconspicuous.jpg);
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.container {
+
+    width: 30%;
+    height: 40%;
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+header {
+    padding: .5rem;
+    background: #ffffff50;
+    border-bottom: 1px solid #000;
+}
+main {
+    padding: .5rem;
+}
+
+h1 {}
+
+h2 {}
+
+p {}
