@@ -1,0 +1,3 @@
+IP: 192.168.0.17
+Subnetmask: 255.255.255.0
+Default Gateway: 192.168.0.1

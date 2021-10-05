@@ -16,7 +16,11 @@
         </header>
         <main>
             <?php
-            
+            setlocale(LC_ALL, "sv_SE.utf8");
+            $datum = strftime("%A %d %b %Y");
+             echo "<p>";
+             echo ucwords($datum);
+             echo "</p>";
             ?>
         </main>
     </div>
