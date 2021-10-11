@@ -1,0 +1,138 @@
+main {
+    padding: 4rem;
+}
+aside{
+    width: 30%;
+    padding: 10px;
+    margin: auto;
+    background-color: #E2D664ab;
+    
+    border-radius: 10px;
+}
+aside h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.background {
+    background: url(../bilder/city.jpg);
+    background-position: top;
+    max-width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    place-items: center;
+
+}
+
+.grid img {
+    width: 400px;
+}
+
+.speech-bubble-right {
+    position: relative;
+    background: #A7D098ab;
+    border-radius: .4em;
+    width: 400px;
+    padding: 20px;
+    margin-top: 50px;
+    animation-name: move-around-left;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.speech-bubble-right:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 1em solid transparent;
+    border-top-color: #A7D098ab;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -0.5em;
+    margin-bottom: -1em;
+}
+
+.speech-bubble-left {
+    position: relative;
+    background: #60C6E5ab;
+    border-radius: .4em;
+    width: 400px;
+    padding: 20px;
+    margin-top: 50px;
+    animation-name: move-around-right;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.speech-bubble-left:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 1em solid transparent;
+    border-top-color: #60C6E5ab;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -0.5em;
+    margin-bottom: -1em;
+}
+
+@keyframes move-around-left {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        left: 20px;
+        top: 0px;
+    }
+    50% {
+        left: 20px;
+        top: 20px;
+    }
+    75% {
+        left: 0px;
+        top: 20px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+@keyframes move-around-right {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        left: -20px;
+        top: 0px;
+    }
+    50% {
+        left: -20px;
+        top: -20px;
+    }
+    75% {
+        left: 0px;
+        top: -20px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+.speech-bubble-right:hover .speech-bubble-left:hover {
+    animation-play-state: paused;
+}

@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    background-image: url(../bilder/fall_cut2.jpeg);
+    background-position: top;
+    text-align: center;
+    color: #FEEFC8;
+    font-family: 'Quicksand';
+    font-weight: 1000;
+}
+
+.container {
+    height: 40rem;
+    position: relative;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+header h2 {
+    font-size: 20px;
+}
+
+header h1,
+header h2 {
+    margin: auto;
+    vertical-align: middle;
+    text-shadow: #000 5px 5px 9px;
+}
+
+
+
+nav {
+    padding: .1rem 0 2rem 0;
+    background: rgb(153, 101, 60);
+    background: linear-gradient(45deg, rgba(153, 101, 60, 0.5270483193277311) 66%, rgba(208, 134, 77, 0) 100%);
+}
+
+
+
+nav ul {
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    margin-top: 2rem;
+    list-style: none;
+    gap: 1rem;
+    text-transform: uppercase;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    transition: .3s ease-out;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #ffffe4;
+    font-size: 1.6rem;
+
+}
+
+.current-link {
+    color: #FEEFC8;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #E2D664ab;
+    border-top: 2px solid #000000ab;
+    padding: 40px;
+    font-family: CopperplateGothic-Bold;
+}
+
+footer ul {
+    display: grid;
+    text-align: center;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    gap: 1rem;
+    list-style: none;
+}
+footer img {
+    max-width: 50px;
+}

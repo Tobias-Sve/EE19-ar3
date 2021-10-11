@@ -1,0 +1,35 @@
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url(./bilder/Seamless_Pattern.jpg);
+}
+
+.container {
+    width: 30%;
+    border-radius: 50%;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #0000FF;
+    padding: 70px;
+}
+p {
+    font-size: 20px;
+}
+button {
+    background-color: #ff0000;
+    padding: 15px;
+}
+p, button {
+    margin-top: 40px;
+    color: #ffffff;
+}
+
