@@ -26,7 +26,28 @@
             </ul>
         </nav>
     </header>
-    
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="../bilder/arrow_up.png" alt="Back to top button"></button>
+    <script>
+        //Get the button:
+        mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
     <div class="background">
         <main>
             <form action="../form.php" method="POST">
@@ -34,19 +55,19 @@
                 <div class="grid">
                     <label>Company Name</label>
                     <input type="text" name="company">
-                    <label>Reference/Name</label>
+                    <label>Reference/Name*</label>
                     <input type="text" name="ref-name" required>
-                    <label>Telephone</label>
+                    <label>Telephone*</label>
                     <input type="text" name="tele" required>
-                    <label>E-mail</label>
+                    <label>E-mail*</label>
                     <input type="email" name="mail" required>
-                    <label>Commercial</label>
+                    <label>Commercial*</label>
                     <input type="radio" name="type" value="com">
-                    <label>Private</label>
+                    <label>Private*</label>
                     <input type="radio" name="type" value="priv">
-                    <label>Other</label>
+                    <label>Other*</label>
                     <input type="radio" name="type" required value="other">
-                    <label>Comments</label>
+                    <label>Comments*</label>
                     <textarea name="comment" rows="5" required></textarea>
                     <div></div>
                     <input type="submit">
@@ -98,9 +119,9 @@
         </main>
         <footer>
             <ul>
-                <li><a href="https://instagram.com/haileys_modeling?utm_medium=copy_link"><img src="../bilder/Instagram-Icon.png" alt=""></a></li>
-                <li><a href="mailto:hailey.alice@hotmail.com"><img src="../bilder/Gmail-Icon.png" alt=""></a></li>
-                <li><a href="https://www.facebook.com/OfficialHaileyAlice/"><img src="../bilder/Facebook-Icon.png" alt=""></a></li>
+                <li><a href="https://instagram.com/haileys_modeling?utm_medium=copy_link" target="_blank"><img src="../bilder/Instagram-Icon.png" alt="Instagram button"></a></li>
+                <li><a href="mailto:hailey.alice@hotmail.com" target="_blank"><img src="../bilder/Gmail-Icon.png" alt="Gmail button"></a></li>
+                <li><a href="https://www.facebook.com/OfficialHaileyAlice/" target="_blank"><img src="../bilder/Facebook-Icon.png" alt="Facebook button"></a></li>
             </ul>
         </footer>
     </div>

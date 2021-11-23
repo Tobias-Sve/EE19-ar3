@@ -2,11 +2,9 @@ main {
     padding: 4rem;
 }
 aside{
-    width: 30%;
+    width: 90%;
     padding: 10px;
     margin: auto;
-    background-color: #E2D664ab;
-    
     border-radius: 10px;
 }
 aside h1 {
@@ -31,41 +29,14 @@ aside h1 {
     width: 400px;
 }
 
-.speech-bubble-right {
+.speech-bubble-left {
     position: relative;
-    background: #A7D098ab;
+    background: #ecececaa;
     border-radius: .4em;
     width: 400px;
     padding: 20px;
     margin-top: 50px;
     animation-name: move-around-left;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-}
-
-.speech-bubble-right:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border: 1em solid transparent;
-    border-top-color: #A7D098ab;
-    border-bottom: 0;
-    border-right: 0;
-    margin-left: -0.5em;
-    margin-bottom: -1em;
-}
-
-.speech-bubble-left {
-    position: relative;
-    background: #60C6E5ab;
-    border-radius: .4em;
-    width: 400px;
-    padding: 20px;
-    margin-top: 50px;
-    animation-name: move-around-right;
     animation-duration: 10s;
     animation-iteration-count: infinite;
 }
@@ -78,7 +49,35 @@ aside h1 {
     width: 0;
     height: 0;
     border: 1em solid transparent;
-    border-top-color: #60C6E5ab;
+    border-top-color: #ecececaa;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -0.5em;
+    margin-bottom: -1em;
+}
+
+.speech-bubble-right {
+    position: relative;
+    background: #3b3b3baa;
+    border-radius: .4em;
+    width: 400px;
+    color: #cccccc; 
+    padding: 20px;
+    margin-top: 50px;
+    animation-name: move-around-right;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.speech-bubble-right:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 1em solid transparent;
+    border-top-color: #3b3b3baa;
     border-bottom: 0;
     border-left: 0;
     margin-left: -0.5em;
@@ -135,4 +134,26 @@ aside h1 {
 }
 .speech-bubble-right:hover .speech-bubble-left:hover {
     animation-play-state: paused;
+}
+
+@media screen and (max-width: 950px) {
+    .grid {
+        grid-template: repeat(3, 1fr .2fr .2fr 1fr) / 1fr;
+    }
+    article:nth-child(even) {
+        margin-bottom: 50px;
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+    .speech-bubble-left, .speech-bubble-right {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .speech-bubble-left, .speech-bubble-right {
+        animation: none;
+        width: 200px;
+    }
 }

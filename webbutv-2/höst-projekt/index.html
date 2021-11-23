@@ -4,62 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hemsida</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="java.js"></script>
+    <title>A quiz</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./java.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>The stereotypical and unforgiving quiz about gender</h1>
+            <h3>Feel free to get angry</h3>
         </header>
         <main>
-            <article>
-                <h2>Question 1</h2>
-                <h3>...</h3>
-                <ul>
-                    <li><button>option1</button></li>
-                    <li><button>option2</button></li>
-                    <li><button>option3 </button></li>
-                </ul>
-            </article>
-            <article>
-                <h2>Question 2</h2>
-                <h3>...</h3>
-                <ul>
-                    <li><button>option1</button></li>
-                    <li><button>option2</button></li>
-                    <li><button>option3 </button></li>
-                </ul>
-            </article>
-            <article>
-                <h2>Question 3</h2>
-                <h3>...</h3>
-                <ul>
-                    <li><button>option1</button></li>
-                    <li><button>option2</button></li>
-                    <li><button>option3 </button></li>
-                </ul>
-            </article>
-            <article>
-                <h2>Question 4</h2>
-                <h3>...</h3>
-                <ul>
-                    <li><button>option1</button></li>
-                    <li><button>option2</button></li>
-                    <li><button>option3 </button></li>
-                </ul>
-            </article>
-            <article>
-                <h2>Question 5</h2>
-                <h3>...</h3>
-                <ul>
-                    <li><button>option1</button></li>
-                    <li><button>option2</button></li>
-                    <li><button>option3 </button></li>
-                </ul>
-            </article>
+            <form>
+                <article>
+                    <h2>Blue, Pink or Neither?</h2>
+                    <h3>Simple enough</h3>
+                    <div class="grid">
+                        <label>Blue</label>
+                        <input class="color" id="Blue" type="radio" name="color" value="Blue">
+                        <label>Pink</label>
+                        <input class="color" id="Pink" type="radio" name="color" value="Pink">
+                        <label>Neither</label>
+                        <input class="color" id="Neither" type="radio" name="color" value="Neither">
+                    </div>
+                </article>
+                <article>
+                    <h2>Action figures, Dolls or Neither?</h2>
+                    <h3>What you spend your time doing</h3>
+                    <div class="grid">
+                        <label>Action Figures</label>
+                        <input class="hobby" id="Figures" type="radio" name="hobby" value="Figures">
+                        <label>Dolls</label>
+                        <input class="hobby" id="Dolls" type="radio" name="hobby" value="Dolls">
+                        <label>Neither</label>
+                        <input class="hobby" id="aNeither" type="radio" name="hobby" value="Neither">
+                    </div>
+                </article>
+                <article>
+                    <h2>Can you cook?</h2>
+                    <h3>Can you make something like a pasta carbonara</h3>
+                    <div class="grid">
+                        <label>Yes</label>
+                        <input class="cook" id="coYes" type="radio" name="cook" value="yes">
+                        <label>No</label>
+                        <input class="cook" id="coNo" type="radio" name="cook" value="no">
+                    </div>
+                </article>
+                <article>
+                    <h2>Do you weigh less/equal to 60 kgs?</h2>
+                    <h3>"How dare you ask me that?"</h3>
+                    <div class="grid">
+                        <label>Yes</label>
+                        <input class="weight" id="wYes" type="radio" name="weight" value="yes">
+                        <label>No</label>
+                        <input class="weight" id="wNo" type="radio" name="weight" value="no">
+                    </div>
+                </article>
+                <article>
+                    <h2>Do you clean your room often?</h2>
+                    <h3>Like, do you vacuum, dust off shelves, take out your laundry, etc</h3>
+                    <div class="grid">
+                        <label>Yes</label>
+                        <input class="clean" id="clYes" type="radio" name="clean" value="yes">
+                        <label>No</label>
+                        <input class="clean" id="clNo" type="radio" name="clean" value="no">
+                        <label>Someone cleans for me</label>
+                        <input class="clean" id="clNeither" type="radio" name="clean" value="special">
+                    </div>
+                </article>
+                <button onclick="myFunction()" class="btn btn-primary">Submit</button>
+            </form>
         </main>
+        <footer>
+            <div class="footer">
+                <h4>Contacts</h4>
+                <a href="https://www.youtube.com/watch?v=AGvrDe3rKxA">My email</a>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

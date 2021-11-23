@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap');
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
@@ -57,7 +60,7 @@ nav {
 
 nav ul {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
     margin-top: 2rem;
     list-style: none;
@@ -71,6 +74,7 @@ nav ul li a {
     font-size: 1.3rem;
     transition: .3s ease-out;
     text-align: center;
+    text-shadow: #ffffff 1px 1px 2px;
 }
 
 nav ul li a:hover {
@@ -83,13 +87,37 @@ nav ul li a:hover {
 .current-link {
     color: #FEEFC8;
     text-decoration: underline;
+    text-shadow: none;
 }
 
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    color: transparent;
+    background-color: transparent;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    transition: all 500ms ease;
+  }
+  
+  #myBtn:hover {
+    background-color: #69696969; /* Add a dark-grey background on hover */
+  }
+  #myBtn img {
+      width: 50px;
+  }
+
+
 footer {
-    background-color: #E2D664ab;
+    background-color: #ececec3e;
     border-top: 2px solid #000000ab;
     padding: 40px;
-    font-family: CopperplateGothic-Bold;
 }
 
 footer ul {
@@ -101,4 +129,19 @@ footer ul {
 }
 footer img {
     max-width: 50px;
+}
+@media screen and (max-width: 600px) {
+    #myBtn {
+        right: 10px;
+        bottom: 20px;
+        padding: 5px;
+    }
+    #myBtn img {
+        width: 40px;   
+    }
+}
+@media screen and (max-width: 400px) {
+    nav ul li a {
+        font-size : .8rem;
+    }
 }

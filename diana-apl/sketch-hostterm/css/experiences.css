@@ -1,67 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+
 main {
     padding: 4rem;
+}
+.title {
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Quicksand';
+    font-weight: 1000;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
 }
 .background {
     background: url(../bilder/black_and_white.jpg);
     background-position: top;
     max-width: 100%;
 }
-.grid {
-    display: grid;
-    grid-template: 1fr 1fr 1fr / 1fr 1fr;
-    place-items: center;
-}
-.speech-bubble-right {
-	position: relative;
-	background: #A7D098ab;
-	border-radius: .4em;
-  width: 400px;
-  padding: 20px;
-  margin-top: 50px;
-}
-.speech-bubble-right:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 1em solid transparent;
-	border-top-color: #A7D098ab;
-	border-bottom: 0;
-	border-right: 0;
-	margin-left: -0.5em;
-	margin-bottom: -1em;
-}
-.speech-bubble-left {
-	position: relative;
-	background: #60C6E5ab;
-	border-radius: .4em;
-    width: 400px;
-    padding: 20px;
-    margin-top: 50px;
-}
 
-.speech-bubble-left:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 1em solid transparent;
-	border-top-color: #60C6E5ab;
-	border-bottom: 0;
-	border-left: 0;
-	margin-left: -0.5em;
-	margin-bottom: -1em;
-}
+img {
+  width: 300px;
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+}
+img:nth-child(odd) {
+  order: 1;
+}
+img:nth-child(even) {
+  order: 3;
+}
+.text {
+  order: 2;
+}
 blockquote{
-  font-size: 1.4em;
-  width:60%;
-  margin:50px auto;
+  font-size: 1.2em;
+  width:40%;
+  margin:50px;
   font-family:Open Sans;
   font-style:italic;
   color: #555555;
@@ -92,4 +64,60 @@ blockquote span{
   font-style: normal;
   font-weight: bold;
   margin-top:1em;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 40px;
+  width: 100%;
+  margin: auto;
+}
+.flex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.flex:nth-child(even) {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 950px) {
+  .flex {
+    flex-direction: column;
+  }
+  .flex:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+  blockquote {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 710px) {
+  
+}
+@media screen and (max-width: 630px) {
+  .text {
+    font-size: 1rem;
+  }
+  main {
+    padding: .1rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  blockquote {
+    padding: 1.2em 30px 1.2em 55px;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 400px) {
+  img {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .text {
+    font-size: .8rem;
+  }
 }

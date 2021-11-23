@@ -26,7 +26,7 @@
                 "Default Gateway: $gw";
 
             //Släng in texten i text filen
-            file_put_contents($filnamn, $texten);
+            file_put_contents($filnamn, $texten, FILE_APPEND);
 
             //Skriv på hemsidan att det är genomfört
             echo "<p class=\"alert alert-success\">Great success! Ditt meddelande har sparats i en textfil!</p>";
