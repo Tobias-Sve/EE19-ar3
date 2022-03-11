@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <header>
+        <h1>My Timeline</h1>
+        <h3>2003 - 2022</h3>
+    </header>
+    <button id="upButton">⇈</button>
+    <main>
+        <button class="eventButton">Add Event</button>
+        <div class="popUp">
+            <div class="popUp-content">
+                <h2>Add event to timeline</h2>
+                <form class="eventForm">
+                    <input id="eventTitle" type="text" placeholder="Title..."><br>
+                    <input id="eventDate" type="date"><br>
+                    <textarea id="eventText" cols="30" rows="10" placeholder="Today was the day..."></textarea><br>
+                    <button id="addBtn" type="button">Submit</button>
+                </form>
+                <h3>This will get added to the timeline</h3>
+            </div>
+        </div>
+        <div class="timeline">
+            <h1 id="emptyTitle">Add some events!</h1>
+            <!-- Items will appear here through JS  -->
+        </div>
+    </main>
+    <footer style="background-color: aqua;">
+        <div class="div"><button class="testButton">Test</button></div>
+    </footer>
+</body>
+</html>

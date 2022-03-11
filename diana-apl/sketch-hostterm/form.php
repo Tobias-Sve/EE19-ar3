@@ -119,7 +119,7 @@ ini_set('display_startup_errors', 1);
 
             $mail->CharSet = "UTF-8";
             $mail->Host = "smtp.gmail.com";
-            $mail->SMTPDebug = 0;
+            $mail->SMTPDebug = 1;
             $mail->Port = 465; //465 or 587
 
             $mail->SMTPSecure = 'ssl';

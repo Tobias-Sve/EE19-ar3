@@ -1,0 +1,27 @@
+body {
+    background-color: #333;
+}
+header h1 {
+    color: #fff;
+    text-align: center;
+}
+form, .resultBox {
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    width: 40%;
+    text-align: center;
+}
+.question {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding: 1.5rem;
+}
+.question p {
+    grid-column: span 2;
+}
+.hidden {
+    display: none;
+}
