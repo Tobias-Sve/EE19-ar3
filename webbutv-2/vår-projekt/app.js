@@ -208,11 +208,3 @@ function updateRemoveButtons() {
 //updateTimeline() to empty timeline and remake it with the items in the dataItems array
 //Add eventlisteners when making the button
 //Have the button remove the target of the event. Aka, the function removes the button that was clicked with "event.target.parentNode.parentNode.remove()" to target the parent section element of the button.
-
-//6347
-
-const testButton = document.querySelector('.testButton');
-testButton.addEventListener('click', (event) => {
-  event.target.parentNode.parentNode.remove();
-  console.log(event.target.parentNode.parentNode);
-})
