@@ -102,7 +102,6 @@ function updateTimeLine() {
   let sortId = dateInput.value.toString();
   sortId = sortId.replace('-', '');
   sortId = sortId.replace('-', '');
-
   let check = dataItems.find((item) => (item.sortId === sortId));
   if (check) {
     alert("An event already exists on that day. CAnnot crate!");
@@ -149,10 +148,12 @@ function updateTimeLine() {
       console.log("Start remove element");
       console.log(dataItems);
       event.target.parentNode.parentNode.parentNode.remove();
-      items = Array.from(document.querySelectorAll(".item"));
       let itemToRemove = dataItems.find((item) => { item.sortId === id }); dataItems.splice(dataItems.indexOf(itemToRemove), 1);
       console.log(dataItems);
       console.log("End remove element");
+      
+      //Update Items array
+      items = Array.from(document.querySelectorAll(".item"));
     })
   });
   //Refresh the items array

@@ -5,7 +5,7 @@ const upgradeSpan = document.querySelector('.currentupgrade');
 const addOne = document.querySelector('.upgrade1');
 const addTwo = document.querySelector('.upgrade2');
 let clicked = 0;
-let upgrade = 1
+let upgrade = 1;
 
 addOne.addEventListener("click", function () {
     upgrade++;
@@ -20,4 +20,8 @@ addTwo.addEventListener("click", function () {
 clickerButton.addEventListener("click", function () {
     clicked = clicked + upgrade;
     clickerSpan.textContent = clicked;
+})
+
+addOne.addEventListener('click', (e) => {
+
 })
