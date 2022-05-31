@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMHI temp</title>
+    <link rel="stylesheet" href="../../bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+</head>
+
+<body>
+    <div class="kontainer">
+        <canvas id="myChart" width="400" height="100"></canvas>
+    </div>
+    <script>
+        //Two empty variables
+        let clock = [];
+        let temperatures = [];
+                
+        //Get the data from the php
+        //Fill "clock" and "temperatures" variables
+        fetch("smhi.php")
+        .then(response => response.json())
+        .then(item => {
+            console.log(item);
+            item.forEach(element => {
+                clock.push(element.label)
+                temperatures.push(element.t)
+
+                
+                //console.log(clock, temperatures);
+            })
+            //Create the graph
+            const eCanvas = document.querySelector('#myChart');
+            let ctx = eCanvas.getContext('2d');
+            let myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: clock,
+                    datasets: [{
+                        label: 'Grader Celcius',
+                        data: temperatures,
+                        backgroundColor: [
+                            'rgb(173, 216, 230, 0.3)'
+                        ],
+                        borderColor: [
+                            'blue'
+                        ],
+                        borderWidth: 1,
+    
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
